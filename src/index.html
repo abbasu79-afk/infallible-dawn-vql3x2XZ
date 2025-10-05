@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ফটোস্টুডিও প্রো - আপনার ডিজিটাল স্মৃতির ঘর</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- নেভিগেশন বার -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <i class="fas fa-camera-retro"></i>
+          <span>ফটোস্টুডিও প্রো</span>
+        </div>
+        <div class="nav-menu">
+          <a href="#home" class="nav-link">হোম</a>
+          <a href="#gallery" class="nav-link">গ্যালারি</a>
+          <a href="#upload" class="nav-link">আপলোড</a>
+          <a href="#edit" class="nav-link">এডিট</a>
+          <a href="#premium" class="nav-link premium-btn">প্রিমিয়াম</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- হিরো সেকশন -->
+    <section id="home" class="hero-section">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          আপনার স্মৃতিগুলো হয়ে উঠুক <span class="highlight">অমূল্য</span>
+        </h1>
+        <p class="hero-subtitle">
+          বাংলাদেশের প্রথম প্রিমিয়াম ফটো ম্যানেজমেন্ট প্ল্যাটফর্ম
+        </p>
+        <div class="hero-buttons">
+          <button class="btn-primary" onclick="scrollToSection('upload')">
+            <i class="fas fa-cloud-upload-alt"></i>
+            ছবি আপলোড করুন
+          </button>
+          <button class="btn-secondary" onclick="scrollToSection('gallery')">
+            <i class="fas fa-images"></i>
+            গ্যালারি দেখুন
+          </button>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="floating-cards">
+          <div class="card card-1">
+            <img
+              src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=300"
+              alt="Sample 1"
+            />
+          </div>
+          <div class="card card-2">
+            <img
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300"
+              alt="Sample 2"
+            />
+          </div>
+          <div class="card card-3">
+            <img
+              src="https://images.unsplash.com/photo-1554151228-14d9def656e4?w=300"
+              alt="Sample 3"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ফিচার সেকশন -->
+    <section class="features-section">
+      <div class="container">
+        <h2 class="section-title">
+          কেন বেছে নিবেন <span class="highlight">ফটোস্টুডিও প্রো</span>?
+        </h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-cloud-upload-alt"></i>
+            </div>
+            <h3>সরল আপলোড</h3>
+            <p>ক্লিক করেই আপলোড করুন আপনার প্রিয় ছবিগুলো। কোন জটিলতা নেই।</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-magic"></i>
+            </div>
+            <h3>স্মার্ট এডিটিং</h3>
+            <p>বিল্ট-ইন এডিটর দিয়ে ছবিগুলো করুন আরও আকর্ষণীয় ও প্রাণবন্ত।</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3>সুরক্ষিত সংরক্ষণ</h3>
+            <p>
+              আপনার ছবি থাকবে সম্পূর্ণ সুরক্ষিত। আমরা রাখি সর্বোচ্চ প্রাইভেসি।
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3>মোবাইল ফ্রেন্ডলি</h3>
+            <p>যেকোনো ডিভাইস থেকে এক্সেস করুন। সব স্ক্রিনে পারফেক্ট দেখাবে।</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- আপলোড সেকশন -->
+    <section id="upload" class="upload-section">
+      <div class="container">
+        <h2 class="section-title">
+          আপলোড করুন আপনার <span class="highlight">স্মৃতি</span>
+        </h2>
+        <div class="upload-area" id="uploadArea">
+          <div class="upload-content">
+            <i class="fas fa-cloud-upload-alt"></i>
+            <h3>ছবি আপলোড করুন</h3>
+            <p>ফাইল সিলেক্ট করুন অথবা ড্রাগ এন্ড ড্রপ করুন</p>
+            <input
+              type="file"
+              id="fileInput"
+              multiple
+              accept="image/*"
+              hidden
+            />
+            <button
+              class="btn-primary"
+              onclick="document.getElementById('fileInput').click()"
+            >
+              ফাইল সিলেক্ট করুন
+            </button>
+          </div>
+        </div>
+        <div class="upload-preview" id="uploadPreview"></div>
+      </div>
+    </section>
+
+    <!-- গ্যালারি সেকশন -->
+    <section id="gallery" class="gallery-section">
+      <div class="container">
+        <h2 class="section-title">
+          আপনার <span class="highlight">গ্যালারি</span>
+        </h2>
+        <div class="gallery-controls">
+          <button class="filter-btn active" data-filter="all">সব ছবি</button>
+          <button class="filter-btn" data-filter="recent">সাম্প্রতিক</button>
+          <button class="filter-btn" data-filter="favorite">প্রিয়</button>
+        </div>
+        <div class="gallery-grid" id="galleryGrid">
+          <!-- ছবিগুলো এখানে লোড হবে -->
+        </div>
+      </div>
+    </section>
+
+    <!-- এডিটিং সেকশন -->
+    <section id="edit" class="edit-section">
+      <div class="container">
+        <h2 class="section-title">
+          এডিট করুন <span class="highlight">পেশাদার</span> স্টাইলে
+        </h2>
+        <div class="edit-container">
+          <div class="edit-preview">
+            <img id="editImage" src="" alt="Edit Preview" />
+          </div>
+          <div class="edit-tools">
+            <h3>এডিটিং টুলস</h3>
+            <div class="tool-group">
+              <label>ব্রাইটনেস</label>
+              <input
+                type="range"
+                id="brightness"
+                min="0"
+                max="200"
+                value="100"
+              />
+            </div>
+            <div class="tool-group">
+              <label>কনট্রাস্ট</label>
+              <input type="range" id="contrast" min="0" max="200" value="100" />
+            </div>
+            <div class="tool-group">
+              <label>স্যাচুরেশন</label>
+              <input
+                type="range"
+                id="saturation"
+                min="0"
+                max="200"
+                value="100"
+              />
+            </div>
+            <div class="filter-buttons">
+              <button class="filter-option" data-filter="none">নরমাল</button>
+              <button class="filter-option" data-filter="grayscale">
+                গ্রেস্কেল
+              </button>
+              <button class="filter-option" data-filter="sepia">সেপিয়া</button>
+              <button class="filter-option" data-filter="vintage">
+                ভিনটেজ
+              </button>
+            </div>
+            <button class="btn-primary" onclick="saveEditedImage()">
+              <i class="fas fa-save"></i>
+              ছবি সেভ করুন
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- প্রিমিয়াম সেকশন -->
+    <section id="premium" class="premium-section">
+      <div class="container">
+        <h2 class="section-title">
+          আপগ্রেড করুন <span class="highlight">প্রিমিয়াম</span> ভার্সনে
+        </h2>
+        <div class="pricing-cards">
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3>বেসিক</h3>
+              <div class="price">মুক্ত</div>
+            </div>
+            <ul class="features-list">
+              <li><i class="fas fa-check"></i> ৫০টি ছবি আপলোড</li>
+              <li><i class="fas fa-check"></i> বেসিক এডিটিং</li>
+              <li><i class="fas fa-times"></i> প্রিমিয়াম ফিল্টার</li>
+              <li><i class="fas fa-times"></i> HD কোয়ালিটি</li>
+            </ul>
+            <button class="btn-outline">বর্তমান প্ল্যান</button>
+          </div>
+          <div class="pricing-card featured">
+            <div class="pricing-header">
+              <h3>প্রিমিয়াম</h3>
+              <div class="price">৳২৯৯/মাস</div>
+            </div>
+            <ul class="features-list">
+              <li><i class="fas fa-check"></i> আনলিমিটেড ছবি</li>
+              <li><i class="fas fa-check"></i> অ্যাডভান্সড এডিটিং</li>
+              <li><i class="fas fa-check"></i> সব ফিল্টার</li>
+              <li><i class="fas fa-check"></i> 4K কোয়ালিটি</li>
+            </ul>
+            <button class="btn-primary">আপগ্রেড করুন</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ফুটার -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>ফটোস্টুডিও প্রো</h3>
+            <p>আপনার ডিজিটাল স্মৃতির বিশ্বস্ত সঙ্গী</p>
+          </div>
+          <div class="footer-section">
+            <h4>লিংক</h4>
+            <a href="#home">হোম</a>
+            <a href="#gallery">গ্যালারি</a>
+            <a href="#upload">আপলোড</a>
+            <a href="#edit">এডিট</a>
+          </div>
+          <div class="footer-section">
+            <h4>সাপোর্ট</h4>
+            <a href="#">হেল্প সেন্টার</a>
+            <a href="#">প্রাইভেসি পলিসি</a>
+            <a href="#">টার্মস অফ সার্ভিস</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; ২০২৪ ফটোস্টুডিও প্রো। সকল অধিকার সংরক্ষিত।</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
